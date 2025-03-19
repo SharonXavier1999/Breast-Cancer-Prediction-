@@ -49,4 +49,90 @@ This **Breast Cancer Prediction System** is a machine learning-based web applica
 - 📌 **Multilingual Support for Wider Accessibility**
 - 📌 **Integration with Electronic Health Records (EHR)**
 
+*******************************************************************************************************************************************************************
 
+# Breast Cancer Classification Project
+
+## Overview
+This project develops a machine learning model to classify breast tumors as malignant or benign using the Wisconsin Breast Cancer Dataset. It includes data analysis, model development, and a web application for predictions.
+
+## Project Structure
+```
+project/
+├── notebooks/               # Jupyter notebooks for data analysis
+│   ├── analysis.ipynb       # Exploratory Data Analysis (EDA) notebook
+│   ├── analysis_advanced.ipynb  # Advanced analysis and visualizations
+├── app/                     # Web application
+│   └── main.py              # Streamlit application code
+├── data/                    # Dataset
+│   └── data.csv             # Wisconsin Breast Cancer Dataset
+├── model/                   # Trained models
+│   ├── main.py              # Model training code
+│   ├── model.pkl            # Trained Logistic Regression model
+│   └── scaler.pkl           # Feature scaler
+├── model1/                  # Alternative model version
+│   ├── model.pkl            # Alternative trained model
+│   └── scaler.pkl           # Alternative feature scaler
+├── requirements.txt         # Python dependencies
+└── README.md                # Project documentation
+```
+
+## Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/breast-cancer-classification.git
+   cd breast-cancer-classification
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the web application:
+   ```bash
+   streamlit run app/main.py
+   ```
+
+## Usage
+### Data Analysis
+- Open `notebooks/analysis.ipynb` in Jupyter Notebook for basic EDA.
+- Open `notebooks/analysis_advanced.ipynb` for advanced visualizations and analysis.
+- Run the cells to view insights and visualizations.
+
+### Web Application
+1. Start the application:
+   ```bash
+   streamlit run app/main.py
+   ```
+2. Access the interface at `http://localhost:8501`.
+3. Input feature values and view predictions.
+
+## Technical Details
+### Data Analysis
+- Exploratory Data Analysis (EDA)
+- Feature visualization
+- Principal Component Analysis (PCA)
+- Correlation analysis
+
+### Machine Learning
+- Logistic Regression with Recursive Feature Elimination (RFE)
+- Model evaluation metrics:
+  - Accuracy: 97.37%
+  - Precision: 98.1%
+  - Recall: 95.8%
+- Model and scaler saved using `pickle`.
+
+### Web Application
+- Input fields for feature values.
+- Real-time prediction display.
+- Visualization of prediction probabilities.
+
+## Requirements
+- Python 3.8+
+- Required packages: `numpy`, `pandas`, `scikit-learn`, `streamlit`, `plotly`, `seaborn`.
+
+## License
+This project is licensed under the MIT License.
+
+## Acknowledgments
+- Dataset: [Wisconsin Breast Cancer Dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic))
+- Tools: Python, Scikit-learn, Streamlit, Plotly
